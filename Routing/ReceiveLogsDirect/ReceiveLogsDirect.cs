@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ReceiveLogsDirect
 {
-    class Program
+    class ReceiveLogsDirect
     {
         static void Main(string[] args)
         {

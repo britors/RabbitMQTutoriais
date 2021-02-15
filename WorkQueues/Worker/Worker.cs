@@ -6,7 +6,7 @@ using System.Threading;
 
 namespace Worker
 {
-    class Program
+    class Worker
     {
         static void Main(string[] args)
         {
