@@ -5,21 +5,27 @@ VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HelloWorld", "HelloWorld", "{41AF3B77-5A0C-4B44-B062-0A2CD4838966}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sender", "HelloWorld\Sender\Sender.csproj", "{01952B04-09AA-406D-9F38-CFC9B90E07F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sender", "HelloWorld\Sender\Sender.csproj", "{01952B04-09AA-406D-9F38-CFC9B90E07F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Receiver", "HelloWorld\Receiver\Receiver.csproj", "{185C35E9-B6E3-4A58-A8DB-7DC75DD37E41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Receiver", "HelloWorld\Receiver\Receiver.csproj", "{185C35E9-B6E3-4A58-A8DB-7DC75DD37E41}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WorkQueues", "WorkQueues", "{0429A70F-DDA3-407F-8645-76AA3E3871BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewTask", "WorkQueues\NewTask\NewTask.csproj", "{41FE17AE-7138-4609-99A4-AD1B6C9C5220}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewTask", "WorkQueues\NewTask\NewTask.csproj", "{41FE17AE-7138-4609-99A4-AD1B6C9C5220}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Worker", "WorkQueues\Worker\Worker.csproj", "{37DFBD1C-24C6-4A8C-AA30-BAC702F8542F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Worker", "WorkQueues\Worker\Worker.csproj", "{37DFBD1C-24C6-4A8C-AA30-BAC702F8542F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishSubscribe", "PublishSubscribe", "{C81AC343-E916-494E-AF15-073E1ADDBBDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmitLog", "PublishSubscribe\EmitLog\EmitLog.csproj", "{E1218A48-F07D-4E8B-B649-C764B2EDFE8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmitLog", "PublishSubscribe\EmitLog\EmitLog.csproj", "{E1218A48-F07D-4E8B-B649-C764B2EDFE8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiveLogs", "PublishSubscribe\ReceiveLogs\ReceiveLogs.csproj", "{1B6AB9A3-F3FD-431A-AA4C-83FE9ADA7096}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReceiveLogs", "PublishSubscribe\ReceiveLogs\ReceiveLogs.csproj", "{1B6AB9A3-F3FD-431A-AA4C-83FE9ADA7096}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Routing", "Routing", "{3C198C4A-DF81-456F-A832-5ABE529F576F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmitLogDirect", "Routing\EmitLogDirect\EmitLogDirect.csproj", "{D63054FE-B0BA-4C5F-A9DF-E519A68BD92F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiveLogsDirect", "Routing\ReceiveLogsDirect\ReceiveLogsDirect.csproj", "{6D642A38-48A4-459F-9567-477E5F8848BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +57,14 @@ Global
 		{1B6AB9A3-F3FD-431A-AA4C-83FE9ADA7096}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B6AB9A3-F3FD-431A-AA4C-83FE9ADA7096}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B6AB9A3-F3FD-431A-AA4C-83FE9ADA7096}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D63054FE-B0BA-4C5F-A9DF-E519A68BD92F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D63054FE-B0BA-4C5F-A9DF-E519A68BD92F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D63054FE-B0BA-4C5F-A9DF-E519A68BD92F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D63054FE-B0BA-4C5F-A9DF-E519A68BD92F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D642A38-48A4-459F-9567-477E5F8848BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D642A38-48A4-459F-9567-477E5F8848BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D642A38-48A4-459F-9567-477E5F8848BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D642A38-48A4-459F-9567-477E5F8848BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +76,8 @@ Global
 		{37DFBD1C-24C6-4A8C-AA30-BAC702F8542F} = {0429A70F-DDA3-407F-8645-76AA3E3871BC}
 		{E1218A48-F07D-4E8B-B649-C764B2EDFE8B} = {C81AC343-E916-494E-AF15-073E1ADDBBDA}
 		{1B6AB9A3-F3FD-431A-AA4C-83FE9ADA7096} = {C81AC343-E916-494E-AF15-073E1ADDBBDA}
+		{D63054FE-B0BA-4C5F-A9DF-E519A68BD92F} = {3C198C4A-DF81-456F-A832-5ABE529F576F}
+		{6D642A38-48A4-459F-9567-477E5F8848BF} = {3C198C4A-DF81-456F-A832-5ABE529F576F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A9748F6E-D6E9-44C0-90C7-E70E338A43EA}
