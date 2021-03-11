@@ -29,10 +29,7 @@ namespace ConsumerFile
                 var filename = Guid.NewGuid().ToString() + ".xlsx";
                 File.WriteAllBytes(@"..\..\..\File\" + filename, body);
                 Console.WriteLine(" [x] Done");
-
-                    // Note: it is possible to access the channel via
-                    //       ((EventingBasicConsumer)sender).Model here
-                    channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
+                channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
             };
             channel.BasicConsume(queue: "file_queue",
                                  autoAck: false,
