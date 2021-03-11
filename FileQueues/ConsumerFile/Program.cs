@@ -28,6 +28,7 @@ namespace ConsumerFile
                 var body = ea.Body.ToArray();
                 var filename = Guid.NewGuid().ToString() + ".xlsx";
                 File.WriteAllBytes(@"..\..\..\File\" + filename, body);
+                Console.WriteLine(" Recuperando o arquivo " + filename);
                 Console.WriteLine(" [x] Done");
                 channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
             };

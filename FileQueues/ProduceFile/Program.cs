@@ -25,10 +25,13 @@ namespace ProduceFile
                 var properties = channel.CreateBasicProperties();
                 properties.Persistent = true;
 
-                channel.BasicPublish(exchange: "",
-                                     routingKey: "file_queue",
-                                     basicProperties: properties,
-                                     body: body);
+                for (var n = 0; n < 1000; n++)
+                {
+                    channel.BasicPublish(exchange: "",
+                                         routingKey: "file_queue",
+                                         basicProperties: properties,
+                                         body: body);
+                }
             }
 
             Console.WriteLine(" Press [enter] to exit.");
