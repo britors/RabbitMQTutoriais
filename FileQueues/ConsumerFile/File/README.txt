@@ -1,0 +1,1 @@
+﻿PASTAS com os Arquivos baixados
