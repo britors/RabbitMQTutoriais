@@ -12,7 +12,7 @@ namespace ProduceFile
             using (var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
             {
-                channel.QueueDeclare(queue: "file_queue",
+                channel.QueueDeclare(queue: "importacao_produtos",
                                      durable: true,
                                      exclusive: false,
                                      autoDelete: false,
@@ -28,7 +28,7 @@ namespace ProduceFile
                 for (var n = 0; n < 1000; n++)
                 {
                     channel.BasicPublish(exchange: "",
-                                         routingKey: "file_queue",
+                                         routingKey: "importacao_produtos",
                                          basicProperties: properties,
                                          body: body);
                 }

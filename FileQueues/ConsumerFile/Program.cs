@@ -12,7 +12,7 @@ namespace ConsumerFile
             var factory = new ConnectionFactory() { HostName = "localhost" };
             using var connection = factory.CreateConnection();
             using var channel = connection.CreateModel();
-            channel.QueueDeclare(queue: "file_queue",
+            channel.QueueDeclare(queue: "importacao_produtos",
                                  durable: true,
                                  exclusive: false,
                                  autoDelete: false,
@@ -32,7 +32,7 @@ namespace ConsumerFile
                 Console.WriteLine(" [x] Done");
                 channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
             };
-            channel.BasicConsume(queue: "file_queue",
+            channel.BasicConsume(queue: "importacao_produtos",
                                  autoAck: false,
                                  consumer: consumer);
 
